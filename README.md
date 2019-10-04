@@ -14,3 +14,5 @@ Our system users must register as members of this system and keep updating their
 - **Patient area** – This area consists of 3 webpages. The first part is where the patients can upload their medical documents and records. The second page is for booking appointments with various doctors. The final page is where the patients can view the doctor’s prescriptions.
 
 -	**Doctor’s area** – This section consists of 4 webpages. The first page consists of the list of patients that the doctor attends to. The second part is where the doctors can view the patient’s medical documents and records. The third page is for uploading the prescriptions of the patient. The final page is where the doctor can upload the list of medicines that are required by the pharmacy.
+
+This is an ongoing project.
