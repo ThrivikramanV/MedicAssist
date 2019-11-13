@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WELCOME!</title>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <style>
+            #id1{
+                position: absolute;
+                left:29vw;   
+                top:10vw;
+                background-color:yellowgreen;
+                border:4px solid black;
+                display: none; 
+                }
+            body{
+                background-image: url("images/signup.jpg");
+                background-repeat: no-repeat;
+                background-size: cover
+            }
+            form>input{
+                background-color:white;
+                color:black;    
+                opacity:0.9;
+                padding:10px;  
+                text-align: center;  
+            }
+            select { 
+                background: white;  
+                width: 100%; 
+                color: black; 
+                cursor: pointer; 
+                border:2px solid black; 
+                border-radius:3px; 
+            }
+            #form1,#form2{
+                display: none;
+            }
+            .select { 
+                position: relative; 
+                display: block; 
+                overflow: hidden; 
+                border-radius: 10px;
+            }
+            ::placeholder{
+                color:black;
+            }
+            #h31{
+                padding-left: 77px;
+                padding-right: 77px;
+            }
+            #h32{
+                padding-left:77px;
+                padding-right: 77px;
+            }
+            #b1{
+                position: relative;
+                left:22vw;
+                top:10vw;
+                padding:70px;
+                onclick:;
+            }
+            #b2{
+                position: relative;
+                left:25vw;
+                top:10vw;
+                padding:70px;
+            }
+            #clos{
+                padding-left: 130px;
+                padding-right: 100px;
+                position: relative;
+                left:130px;
+            }
+            #sub{
+                padding-left: 120px;
+                padding-right: 100px;
+                position: relative;
+                left:130px;
+            }
+        </style>
+    </head>
+    <body>
+            <h1 align="center" style="font-family: sans-serif;color:black">Who Are You?</h1>    
+            <button id="b1" type="button" class="btn btn-primary" onclick="showdoc()"><span id="h31">Doctor</span></button>
+            <button id="b2" type="button" class="btn btn-primary" onclick="showpat()" ><span id="h32">Patient</span></button>
+        <div id="id1">
+            <form method="POST" id="form1">
+                <input type="text" name="dnamef" size="30" maxlength="20" placeholder="FirstName" required/>
+                <input type="text" name="dnamel" placeholder="LastName" size="30" maxlength="20" required/><br />
+                <input type="email" name="email" placeholder="E-MAIL" size="30" required>
+                <input type="tel" name="phoned" placeholder="Phone Number" pattern="[0-9]{10}" size="30" maxlength="10" required><br />
+                <input type="password" name="pswd" placeholder="Enter Password" maxlength="20" size="30" required/>
+                <input type="password" name="pswd" placeholder="Confirm Your Password" maxlength="20" size="30" required/><br />
+                <div class="select">
+                <h3 style="color:black;">Areas Of Specialization(Select Below)</h3>
+                <select name="specs" id="slct" multiple size="3">
+                <option value="Allergists">Allergists</option>
+                <option value="Anesthesiologists">Anesthesiologists</option>
+                <option value="Cardiologists">Cardiologists</option>
+                <option value="Colon and Rectal Surgeons">Colon and Rectal Surgeons</option>
+                <option value="Critical Care Medicine Specialists">Critical Care Medicine Specialists</option>
+                <option value="Dermatologists">Dermatologists</option>
+                <option value="Endocrinologists">Endocrinologists</option>
+                <option value="Emergency Medicine Specialists">Emergency Medicine Specialists</option>
+                <option value="Family Physicians">Family Physicians</option>
+                <option value="Gastroenterologists">Gastroenterologists</option>
+                <option value="Hematologists">Hematologists</option>
+                <option value="Nephrologists">Nephrologists</option>
+                <option value="Neurologists">Neurologists</option>
+                <option value="Obstetricians and Gynecologists">Obstetricians and Gynecologists</option>
+                <option value="Ophthalmologists">Ophthalmologists</option>
+                <option value="Osteopaths">Osteopaths</option>
+                <option value="Radiologists">Radiologists</option>
+                <option value="Rheumatologists">Rheumatologists</option>
+                <option value="Urologists">Urologists</option>
+                </select> 
+                <button id="sub" type="submit" value="submit" class="btn btn-dark">SUBMIT</button><br /><br />
+                <button id="clos" type="button" class="btn btn-danger" onclick="closedoc()">CLOSE</button>
+                </div>
+            </form>
+            <form method="POST" id="form2">
+                    <input type="text" name="pnamef" size="30" maxlength="20" placeholder="FirstName" required/>
+                    <input type="text" name="pnamel" placeholder="LastName" size="30" maxlength="20" required/><br />
+                    <input type="email" name="emailp" placeholder="E-MAIL" size="30" required>
+                    <input type="tel" name="phonep" placeholder="Phone Number" pattern="[0-9]{10}" size="30" maxlength="10" required><br />
+                    <input type="password" name="pswp" placeholder="Enter Password" maxlength="20" size="30" required/>
+                    <input type="password" name="pswp" placeholder="Confirm Your Password" maxlength="20" size="30" required/><br />
+                    <br />
+                    <h4>Medical Record</h4>
+                    <input id="upfile" type="file" name="file1" title="file size should be less than 2MB" accept="image/png , image/jpeg" />
+                    <input type="button" name="fileupld" value="upload" onclick="verify()"/><br/>
+                    <button id="sub" type="submit" value="submit" class="btn btn-dark">SUBMIT</button><br /><br />
+                    <button id="clos" type="button" class="btn btn-danger" onclick="closepat()">CLOSE</button>
+            </form>
+        </div>
+        <script>
+            var z=0,y=0
+            function showdoc(){
+                z=1
+                if(y==0){
+                document.getElementById("form1").style.display="block";
+                document.getElementById("id1").style.display="block";
+                }
+            }
+            function closedoc(){
+                document.getElementById("form1").style.display="none";
+                document.getElementById("id1").style.display="none";
+                z=0;
+            }
+            function showpat(){
+                if(z==0){
+                document.getElementById("form2").style.display="block";
+                document.getElementById("id1").style.display="block";
+                y=1
+                }
+            }
+            function closepat(){
+                y=0
+                document.getElementById("form2").style.display="none";
+                document.getElementById("id1").style.display="none";
+            }
+            function verify(){
+                const fle=document.getElementById("upfile").files
+                if(!(fle[0].size/1000 <=2048))
+                    alert('File Size Should Be Less Than 2MB')
+                
+            }
+        </script>
+    </body>
+</html>

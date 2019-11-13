@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Medical Assistance</title>
+    <link rel="stylesheet" href="newcss.css">
+</head>
+<body>
+        <div id="id1">
+            <div id="id2"><img src="images/logo.png" style="width:100px;height:80px;" /></div>
+          <div id="id3">Medic Assist</div>
+          <div id="id4"></div>
+          <div id="id5"><button id="id6" onclick="openForm()">Login</button></div>
+          <div class="form1" id="id7">
+            <form action="" class="form-container">
+              <h1>Login</h1>
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+              <button type="submit" class="btn">Login</button>
+              <p><b>Don't have an Account?</b><br/><a href="signup.html">Click here</a></p>
+              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+          </div>
+          <div id="id8"><a href="https://www.google.com">About Us</a></div>
+        </div>
+<div class="slideshow-container" id="anim1">
+<div class="mySlides fade">
+  <img id="imgid1" src="images/ehr.jpg" width=500>
+  <div class="text">Store and manage your medicals records online, making it easier for both you and your doctor</div>
+</div>
+<div class="mySlides fade">
+  <img id="imgid1" src="images/prescription.jpg" width=500>
+  <div class="text">A step towards ending the prescription-less purchase of drugs</div>
+</div>
+<div class="mySlides fade">
+  <img id="imgid1" src="images/appointment.jpg" width=500>
+  <div class="text">Book appointments with specialized doctors at various locations</div>
+</div>
+</div>
+<br>
+
+<div class="set">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+</div>
+<div class="foot">
+    <footer>
+        <p style="color:turquoise">Offered By FullStackWarriors Private Limited All Rights Reserved</p>
+        <p style="color:turquoise">&#169 2019</p>
+    </footer> 
+</div>
+<script>
+        var ID;
+        function openForm() {
+          document.getElementById("id7").style.display = "block";
+          clearInterval(ID);
+          document.getElementById("anim1").style.display="none";
+          document.body.style.backgroundImage="url('images/fback.jpg')"
+          document.body.style.backgroundSize="cover";
+        }
+        function closeForm() {
+          document.getElementById("id7").style.display = "none";
+          document.getElementById("anim1").style.display="block";
+          ID=setInterval(showSlides,2000);
+          document.body.style.backgroundImage="url('images/nback.jpg')"
+        }
+var slideIndex = 0;
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+ID=setInterval(showSlides,2000);
+</script>
+
+</body>
+</html> 
