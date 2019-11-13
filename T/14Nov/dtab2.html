@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="dstyle.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="id1">
+            <div id="sticky-header" class="main-id1">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-5 col-lg-4">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="logo.jpg" alt="" width="80">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="active" href="index.html">Home</a></li>
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3" style="font-size: 18px;">
+                            Hi <span id="docname"></span> ! <br> PName: <span id="patname"></span>
+                        </div>
+                        <div class="col-xl-1 col-lg-1 d-none d-lg-block">
+                            <div class="Appointment">
+                                <div class="book_btn d-none d-lg-block">
+                                    <a href="#">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="tabmenu">
+
+        <button class="tab" id="red" onclick="location.href='dtab1.html'">Prescriptions</button>
+        <button class="tab" id="green" onclick="location.href='dtab2.html'">Patient Records</button>
+
+    </div>
+
+    <div class="container">
+        <div class="row" style="position: relative;top: 70px;">
+            <div class="col-xl-4 col-md-6 col-lg-4">
+                <div class="single_department1">
+                    <div class="department_thumb">
+                        <div id="dp">Document Name:</div>
+                        <div id="dp1">Doc1.pdf</div>
+                        <div id="dp">Date of upload:</div>
+                        <div id="dp1">27/10/2019</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6 col-lg-4">
+                <div class="single_department1">
+                    <div class="department_thumb">
+                        <div id="dp">Document Name:</div>
+                        <div id="dp1">Doc2.pdf</div>
+                        <div id="dp">Date of upload:</div>
+                        <div id="dp1">27/10/2019</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6 col-lg-4">
+                <div class="single_department1">
+                    <div class="department_thumb">
+                        <div id="dp">Document Name:</div>
+                        <div id="dp1">Doc3.pdf</div>
+                        <div id="dp">Date of upload:</div>
+                        <div id="dp1">17/10/2019</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6 col-lg-4">
+                <div class="single_department1">
+                    <div class="department_thumb">
+                        <div id="dp">Document Name:</div>
+                        <div id="dp1">Doc4.pdf</div>
+                        <div id="dp">Date of upload:</div>
+                        <div id="dp1">17/10/2019</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <span id="colorbar"></span>
+
+    <script type="text/javascript" src="daction.js"></script>
+
+</body>
+
+</html>
