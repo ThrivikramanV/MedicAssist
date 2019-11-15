@@ -1,0 +1,354 @@
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+button >*{
+  pointer-events:none;
+}
+#tabmenu {
+  width:100%;
+  position:absolute;
+  top:125px;
+}
+
+.tab {
+  background-color: #555;
+  color: white;
+  float:left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width:50%;
+  border-radius:10px 10px 0 0;
+}
+
+.tab:hover {
+  background-color: #777;
+}
+
+#colorbar {
+  width:100%;
+  height:8px;
+  display:block;
+  position:absolute;
+  top:173px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 16%;
+  position: fixed;
+  top: 181px;
+  left:0;
+  background-color: #111;
+  padding-top: 100px;
+}
+
+.sidenav .navHead {
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  font-size: 27px;
+  color: #f1f1f1;
+}
+
+#fileupload {
+  opacity: 0.0;
+  position: absolute; 
+  top: 8px; 
+  left: 0; 
+  bottom: 0; 
+  right: 0; 
+  width: 100%; 
+  height:100%;
+  transform: scale(2.5,1.5);
+}
+
+.sidenav .opts {
+  position: relative;
+  width: 70px;
+  height: 30px;
+  padding: 8px 8px 8px 32px;
+  font-size: 25px;
+  color: #818181;
+  display:block;
+  cursor: pointer;
+}
+
+.sidenav .opts:hover {
+  color: #f1f1f1;
+}
+
+.doclisthead {
+  width:82%;
+  position: fixed;
+  top:189px;
+  left:265px;
+}
+
+.file {
+  position: absolute;
+  left:10px;
+  font-size: 20px;
+}
+
+.time {
+  position: absolute;
+  right:15px;
+  font-size: 20px;
+}
+
+.doclistheadline {
+  position: absolute;
+  top:25px;
+  background-color:grey;
+  width:100%;
+  height:3px;
+  display:block;
+}
+
+.doclist {
+  width:100%;
+  position:fixed;
+  top:225px;
+  left:255px;
+  right:10px;
+  bottom:10px;
+  overflow:auto;
+}
+
+.docbox {
+  position: relative;
+  left: 10px;
+  width: 82%;
+  height: 40px;
+  background-color: #c7c7c7;
+  cursor: pointer;
+  padding: 3px 0 0 5px;
+  margin: 10px 0 10px 0;
+}
+
+.docbox:hover {
+  box-shadow: 0 0 10px #000;
+}
+
+.bookform {
+  position: relative;
+  left:400px;
+  top:100px;
+}
+
+#bookimg {
+  position: absolute;
+  left:970px;
+  top:250px;
+  width:500px;
+  border-radius: 10px;
+}
+
+/*.prescon1 {
+  top: 191px;
+  left: 10px;
+  right: 10px;
+  position: absolute;
+}
+
+.prescon2 {
+  width: 100%;
+  padding: 10px 0 10px 0;
+}
+
+.preshead {
+  position: relative;
+  width: 100%;
+  background-color: #000;
+  color:white;
+  height: 70px;
+}
+
+.presbody {
+  position: relative;
+  width: 100%;
+  background-color: rgb(30, 104, 173);
+}
+
+.doctname {
+  position: relative;
+  height: 25px;
+  padding: 10px 10px 0 10px;
+  font-size: 25px;
+}
+
+.hospname {
+  position: relative;
+  height: 20px;
+  padding: 10px 10px 10px 10px;
+  font-size: 20px;
+}
+
+.presdate {
+  position: absolute;
+  top:20px;
+  right: 20px;
+  font-size: 20px;
+}
+
+.presbox {
+  position: relative;
+  top: 10px;
+  left:10px;
+  width: 98%;
+  height: 30px;
+  background-color: #c7c7c7;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.presbox:hover {
+  box-shadow: 0 0 2px 2px #00ffff;
+}*/
+
+.doctname {
+  position: relative;
+  height: 25px;
+  padding: 10px 10px 0 10px;
+  font-size: 25px;
+  color:#131516;
+}
+
+.hospname {
+  position: relative;
+  height: 20px;
+  padding: 10px 10px 10px 10px;
+  font-size: 20px;
+  color:#131516;
+}
+
+
+.presbox {
+  position: relative;
+  top: 10px;
+  left:4px;
+  width: 98%;
+  height: 30px;
+  background-color: #c7c7c7;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.presbox:hover {
+  box-shadow: 0 0 2px 2px #2F3B42;
+}
+
+#dp1 {
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight:100;
+}
+
+.department_thumb:hover {
+    cursor:pointer;
+}
+
+.department_thumb {
+    padding: 0 0 10px 0;
+}
+
+
+
+
+
+
+
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 70%;
+  border-radius:0%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top:0px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
