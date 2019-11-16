@@ -13,6 +13,7 @@ else{
     if($result=mysqli_query($conn,$sql)){
         $arr=array('9','10','11','12','13','14','15','16','17');
         $temp=array();
+		
         while ($row=mysqli_fetch_row($result)){
             if($_POST['date']==$row[4] && $_POST['doc']==$row[3]){
                     array_push($temp,$row[5]);

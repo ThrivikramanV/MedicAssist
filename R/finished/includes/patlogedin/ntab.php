@@ -77,15 +77,7 @@ if(isset($_POST['sign-in']))
                 </a>
               </div>
             </div>
-            <div class="col-xl-4 col-lg-5" style="background-color:#ff6f00">
-              <div class="main-menu  d-none d-lg-block">
-                <nav>
-                  <ul id="navigation">
-                    <li><a class="active" href="../logout.php">Home</a></li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
+            <div class="col-xl-4 col-lg-5"></div>
             <div class="col-xl-3 col-lg-3" style="font-size: 18px;">
               Hi <span id="patname">%s</span>! <br> Patient ID: <span id="patid">%s</span>
             </div>

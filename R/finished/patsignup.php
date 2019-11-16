@@ -23,7 +23,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-xl-5 col-lg-5" style="background-color:#ff6f00">
+                        <div class="col-xl-5 col-lg-5">
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
