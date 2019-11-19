@@ -13,7 +13,7 @@ if(isset($_POST['sign-in']))
   if(isset($_COOKIE['appointment'])){
     $apid=$_COOKIE['appointment'];
     $apid=explode(':', $apid);
-    $apid=trim($apid[1]);
+    $apid=trim($apid[0]);
     $mysql="DELETE FROM appointments WHERE patid='$id' AND docname='$apid'";
     $conn->query($mysql);
   }
@@ -128,7 +128,7 @@ if(isset($_POST['sign-in']))
   </div>
 
   <div class="doclisthead">
-    <div class="file">File</div>
+    <div class="file">File name</div>
     <div class="time">Time of upload</div>
     <div class="doclistheadline"></div>
     <br>
@@ -147,12 +147,12 @@ if(isset($_POST['sign-in']))
       New
     </div>
     <br>
-    <div class="opts" id="delappoint">
-      Cancel
-    </div>
-    <br>
     <div class="opts" onclick="exists()">
       Existing
+    </div>
+    <br>
+    <div class="opts" id="delappoint">
+      Cancel
     </div>
 
   </div>
@@ -220,8 +220,13 @@ if(isset($_POST['sign-in']))
     <input type="text" value="%s" name="patfname" style="display:none"/>
       <button type="submit" name="appoint-submit" class="btn btn-outline-success" style="position:relative;left:220px;">Book</button>
     </form>
-    <div id="existing" class="doclisthead">
-    
+    <div id="existing" style="position:fixed;width:1510px;left:265px;">
+      <div class="doclisthead">
+        <div class="file">Doctor name</div>
+        <div class="time">Time of appointment</div>
+        <div class="doclistheadline"></div>
+        <br>
+      </div>
     </div>
   </div>
 
@@ -247,8 +252,8 @@ if(isset($_POST['sign-in']))
         msg=msg.split(";")
         for(let i=0;i<msg.length-1;i++){
             let info=msg[i].split(" ")
-            var filename="Doctor:  "+info[0]+" "+info[1] 
-            var time="Date: "+info[2]+"<br >"+"Time: "+info[3]+":00"
+            var filename=info[0]+" "+info[1] 
+            var time=info[3]+":00\xa0\xa0\xa0"+info[2]
             var newelement = document.createElement("div");
             newelement.className = "docbox";
             newelement.id = filename;
@@ -352,12 +357,11 @@ if(isset($_POST['sign-in']))
       newelement.addEventListener("mouseover",function(){imgsrc=rootpath;mainid=val})
       newelement.innerHTML = String.raw`
             <div class="single_department1">
-                <div class="department_thumb">
+                <div class="department_thumb" style="margin-top:80px;padding-top:5px;">
                     <button class="btn btn-info" onclick="downfile()"><a href="" class="myclass" download>Download</a></button>
-                    <div id="dp1">`+"PatientId: "+a[0]+`</div>
-                    <div id="dp">`+"Filename: "+a[4]+`</div>
-                    <div id="dp">`+"Time Of Upload: "+a[5]+`</div>
-                    <div id="dp">`+"Date Of Upload: "+a[3]+`</div>
+                    <div id="dp"><b>`+"File Name: "+`</b>`+a[4]+`</div>
+                    <div id="dp"><b>`+"Time Of Upload: "+`</b>`+a[5]+`</div>
+                    <div id="dp"><b>`+"Date Of Upload: "+`</b>`+a[3]+`</div>
                     <div id="dp>`+"File: "+`</div>
                 </div>
             </div>`;
