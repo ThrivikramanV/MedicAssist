@@ -15,19 +15,18 @@
             <div id="sticky-header" class="main-id1">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-xl-4 col-lg-4">
+                        <div class="col-xl-5 col-lg-5">
                             <div class="logo">
                                 <a href="../index.html">
                                     <img src="img/logo.jpg" alt="" width="80">
                                 </a>
                             </div>
                         </div>
-                        <div class="col-xl-5 col-lg-5">
+                        <div class="col-xl-4 col-lg-4">
                             <div class="main-menu  d-none d-lg-block" id='sign'>
                                 <nav>
                                     <ul id="navigation">
                                         <li><a href="../index.html">Home</a></li>
-                                        <li><a href="../pharmacy.html">Pharmacy</a></li>
                                         <li><a href="../contact.html">Contact Us</a></li>
                                         <li><a href="#">Sign In <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
@@ -120,7 +119,6 @@
                             <ul>
                                 <li><a href="../contact.html">Contact Us</a></li>
                                 <li><a href="#sign">Login</a></li>
-                                <li><a href='../pharmacy.html'>Pharmacy</a></li>
                                 <li><a href="#sign"> Signup</a></li>
 
                             </ul>

@@ -96,14 +96,14 @@ else{
             <div id="sticky-header" class="main-id1">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-xl-5 col-lg-4">
+                        <div class="col-xl-6 col-lg-6">
                             <div class="logo">
                                 <a href="index.html">
                                     <img src="../img/logo.jpg" alt="" width="80">
                                 </a>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-3" style="background-color:#ff6f00">
+                        <div class="col-xl-2 col-lg-2">
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
@@ -113,10 +113,10 @@ else{
                                 </nav>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-3" style="font-size: 18px;">
+                        <div class="col-xl-2 col-lg-2" style="font-size: 18px;">
                             Hi <span id="docname"><?php echo $_POST["docfname"] ?></span> !
                         </div>
-                        <div class="col-xl-1 col-lg-1 d-none d-lg-block">
+                        <div class="col-xl-2 col-lg-2 d-none d-lg-block">
                             <div class="Appointment">
                                 <div class="book_btn d-none d-lg-block">
                                     <a href="../logout.php">Logout</a>
@@ -138,13 +138,13 @@ else{
         <div class="row" style="position: relative;top: 20px;display:none" id="recordtab">
         </div>
     </div>
-    <div id="tabmenu" style="display:none">
+    <div id="tabmenu" style="display:none;top:145px;">
     <button class="tab" id="red" onclick="dispp()">Prescriptions</button>
     <button class="tab" id="green" onclick="dispr()">Patient Records</button>
     </div>
-  <span id="colorbar" style="display:none"></span>
+  <span id="colorbar" style="display:none;top:193px;"></span>
 
-  <div class="sidenav" style="display:none">
+  <div class="sidenav" style="display:none;top:201px;">
 
     <span class="navHead">Prescriptions</span>
 
@@ -165,14 +165,14 @@ else{
     <br>
   </div>
 
-  <div class="doclisthead" style="display:none">
+  <div class="doclisthead" style="display:none;top:209px;">
     <div class="file">File</div>
     <div class="time">Time of upload</div>
     <div class="doclistheadline"></div>
     <br>
   </div>
 
-  <div class="doclist"></div>
+  <div class="doclist" style="top:245px;"></div>
 
   <div id="id01" class="modal">  
   <form class="modal-content animate" action="">
@@ -252,17 +252,17 @@ else{
       newelement.className="col-xl-4 col-md-6 col-lg-4"
       newelement.addEventListener("mouseover",function(){patid=id;cname=count})
       newelement.innerHTML = String.raw`
-            <div class="single_department1">
+            <div class="single_department1" style="position:relative;top:-60px;">
                 <div class="department_thumb">
                     <button type="button" class="btn btn-info" onclick="disp()">View</button>
                     <button type="button" class="btn btn-primary" onclick="apprappoint()">Approve</button>
                     <button type="button" class="btn btn-danger"  onclick="rejectappoint()">Reject</button>
-                    <div id="dp1">`+"PatientName:"+pname+`</div>
-                    <div id="dp">`+"ID: "+id+`<div>
-                    <div id="dp">`+"Hospital: "+hospital+`</div>
-                    <div id="dp">`+"DOA:"+dateofappoint+`</div>
-                    <div id="dp">`+"TIME:"+timeofappoint+`</div>
-                    <div id="dp" class=`+count+`>`+"Status: "+status+`</div>
+                    <div id="dp1">`+"PatientName: "+pname+`</div>
+                    <div id="dp"><b>`+"ID: "+`</b>`+id+`<div>
+                    <div id="dp"><b>`+"Hospital: "+`</b>`+hospital+`</div>
+                    <div id="dp"><b>`+"DOA: "+`</b>`+dateofappoint+`</div>
+                    <div id="dp"><b>`+"TIME: "+`</b>`+timeofappoint+`</div>
+                    <div id="dp" class=`+count+`><b>`+"Status: "+`</b>`+status+`</div>
                 </div>
             </div>`;
       document.getElementsByClassName("row")[1].appendChild(newelement);
@@ -377,10 +377,9 @@ function removeDoc()
                 <div class="department_thumb">
                     <button class="btn btn-info" onclick="enlarge()">View</button>
                     <div id="dp1">`+"PatientId: "+a[0]+`</div>
-                    <div id="dp">`+"Filename: "+a[3]+`</div>
-                    <div id="dp">`+"Time Of Upload: "+a[1]+`</div>
-                    <div id="dp">`+"Date Of Upload: "+a[2]+`</div>
-                    <div id="dp>`+"File: "+`</div>
+                    <div id="dp"><b>`+"Filename: "+`</b>`+a[3]+`</div>
+                    <div id="dp"><b>`+"Time Of Upload: "+`</b>`+a[1]+`</div>
+                    <div id="dp"><b>`+"Date Of Upload: "+`</b>`+a[2]+`</div>
                 </div>
             </div>`;
       rarry.push(newelement)
