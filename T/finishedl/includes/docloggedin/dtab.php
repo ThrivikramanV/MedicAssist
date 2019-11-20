@@ -241,7 +241,7 @@ else{
     var xtpd=new XMLHttpRequest();
     xtpd.onreadystatechange=function(){
        if(this.readyState==4 && this.status==200){
-          document.getElementsByClassName(cname)[0].innerHTML="Status: "+this.responseText;
+          document.getElementsByClassName(cname)[0].innerHTML="<b>Status: </b>"+this.responseText;
        }
     }
     var dname='<?php echo $_POST["docfname"];?>'
@@ -253,7 +253,7 @@ else{
     var xtpd=new XMLHttpRequest();
     xtpd.onreadystatechange=function(){
        if(this.readyState==4 && this.status==200){
-          document.getElementsByClassName(cname)[0].innerHTML="Status: "+this.responseText;
+          document.getElementsByClassName(cname)[0].innerHTML="<b>Status: </b>"+this.responseText;
        }
     }
     var dname='<?php echo $_POST["docfname"];?>'
@@ -331,6 +331,10 @@ else{
       arr=[]
       rarry=[]
       document.getElementsByClassName("row")[2].style.display="none"
+      document.getElementsByClassName("doclist")[0].style.display="none"
+      pixelcount = 0
+      pixelvercount=0
+      document.getElementsByClassName("tab")[1].style.backgroundColor="#555"
     }
 
 var input = document.getElementById("fileupload");
@@ -382,11 +386,20 @@ function removeDoc()
   lxtpd.send("patientid="+patid);
   } 
   var imgsrc;
+  var pixelcount = 0
+  var pixelvercount=0
   function displayrecords(a){
       a=a.split(" ")
       var rootpath="../records/"+a[0]+"/"+a[3]
       var newelement=document.createElement("div")
-      newelement.className="col-xl-4 col-md-6 col-lg-4"
+      newelement.className="col-xl-4 col-md-4 col-lg-4"
+      newelement.style = "position:absolute;left:"+pixelcount+"px;top:"+pixelvercount+"px";
+      pixelcount+=400
+      if(pixelcount>=1200)
+      {
+        pixelcount=0
+        pixelvercount+=200;
+      }
       newelement.addEventListener("mouseover",function(){imgsrc=rootpath})
       newelement.innerHTML = String.raw`
             <div class="single_department1">

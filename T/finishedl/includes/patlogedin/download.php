@@ -7,9 +7,9 @@ if(isset($_POST["down-submit"])){
 		<body>
 		<img src='../records/%s/%s' style='width:%s;height:%s'/>
 		<div id='data' style='display:flex'>
-		<button class='btn btn-primary' onclick='printer()' style='position:relative;left:0px;padding:18px 150px 18px 150px'><strong>PRINT</strong></button>
-                <button class='btn btn-primary'style='position:relative;left:80px;padding:18px 150px 18px 150px'><strong><a href='../records/%s/%s' download>DOWNLOAD</a></strong></button>
-		<button class='btn btn-danger' onclick='goback()' style='position:relative;left:150px;padding:18px 150px 18px 150px'><strong>CANCEL / GO BACK</strong></button>
+		<button class='btn btn-primary' onclick='printer()' style='position:relative;left:120px;padding:18px 150px 18px 150px'><strong>PRINT</strong></button>
+                <button class='btn btn-primary'style='position:relative;left:170px;padding:18px 150px 18px 150px'><strong><a href='../records/%s/%s' download>DOWNLOAD</a></strong></button>
+		<button class='btn btn-danger' onclick='goback()' style='position:relative;left:220px;padding:18px 150px 18px 150px'><strong>CANCEL / GO BACK</strong></button>
 		</div>
 		<form method='POST' action='ntab.php' id='form1'>
         <input type='text' value=%s style='display:none' name='patid'/>
