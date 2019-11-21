@@ -187,14 +187,16 @@ else{
 
   <div class="doclist" style="top:245px;display:none"></div>
 
-  <div id="id01" class="modal">  
+  <div id="id01" class="modal" style="background-color: rgba(0,0,0,0.6);">  
   <form class="modal-content animate" action="">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <span onclick="document.getElementById('id01').style.display='none';
+                      document.getElementById('bottomtrans').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="" alt="Avatar" class="avatar" id="eimage">
     </div>
   </form>
 </div>
+<div id="bottomtrans" style="position:absolute;top:90%;bottom:0px;width:100%;display:none;background-color: rgba(0,0,0,0.6);"></div>
 
 
 
@@ -419,11 +421,13 @@ function removeDoc()
     document.getElementById("eimage").src=imgsrc;
     document.getElementById('id01').style.width="auto;"
     document.getElementById('id01').style.display='block'
+    document.getElementById('bottomtrans').style.display='block'
   }
   function viewimage(a){
   document.getElementById("eimage").src="../prescriptions/"+patid+"/"+a;
   document.getElementById('id01').style.width="auto;"
   document.getElementById('id01').style.display='block'
+  document.getElementById('bottomtrans').style.display='block'
   }
 function dispp(){
       document.getElementsByClassName("container")[1].style.display="none";
